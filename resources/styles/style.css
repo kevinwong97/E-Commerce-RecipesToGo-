@@ -1,0 +1,776 @@
+@charset "utf-8";
+/* Global Styles */
+ /*
+	Product Catalogue Rulesets
+	===
+ */
+.paragraph1{
+	padding:8px;
+	margin-left:100px;
+}
+ .section {
+     display: flex;
+     background-color: lightgray;
+ }
+
+ .product {	
+     display: flex;
+     background-color: white;
+     border: 1px solid #BDBDBC;
+     /* A gray darker than "light gray" */
+     margin: 20px;
+     padding: 10px;
+     flex: 1;
+ }
+
+ .product_image {
+     width: 275px;
+     height: 300px;
+ }
+
+ .product_image_thumbnail {
+     width: 100px;
+     height: 110px;
+ }
+ /*
+	Cart Table Rulesets
+	===
+ */
+
+ .simpleCart_items table {
+     /*
+	Need to set border-collapse for tr border (refer to ".simpleCart_items tr" ruleset)
+to appear.
+	*/
+     border-collapse: collapse;
+	 margin-left:auto;
+     margin-bottom: 20px;
+	 
+	
+ }
+
+ .simpleCart_items th {
+     font-size: 125%;
+     /* Use bigger font for table heading. */
+ }
+
+ .simpleCart_items tr {
+     border-bottom: 1px solid lightgray;
+ }
+
+ .simpleCart_items td {
+     padding: 10px;
+ }
+ /*
+	"Totals Table" Rulesets
+	===
+ */
+
+ table.costs {
+     border: 1px solid lightgray;
+     width: auto;
+     margin-right: 0px;
+     margin-left: auto;
+     padding: 10px;
+     font-size: 110%;
+ }
+
+ td.costs {
+     padding-left: 10px;
+     padding-right: 10px;
+     text-align: right;
+ }
+ /*
+	Links Rulesets
+	===
+ */
+
+ .button,
+ a.simpleCart_increment,
+ a.simpleCart_decrement,
+ a.simpleCart_remove,
+ a.item_add {
+     background-color: white;
+     border: 1px solid lightgray;
+     border-radius: 5px;
+     color: black;
+     margin-right: 10px;
+     padding: 10px 10px 10px 10px;
+     text-decoration-line: none;
+ }
+
+ .item_price {
+     font-size: 120%;
+     font-weight: bold;
+ }
+
+ a.simpleCart_empty {
+     color: lightslategray;
+     font-size: 80%;
+     padding: 10px 10px 10px 10px;
+ }
+
+body {
+	background-color: #f7f7f7;
+}
+
+/* basic text headers*/
+h1 {	
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: #000;
+}
+
+h2 {	
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	/* color: #000; */
+}
+
+p {
+	clear: both;
+	overflow: auto;
+	/* background-color: #fff; */
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-style: normal;
+	font-weight: 200;
+	line-height: 1.8;
+/*	padding-top: 22px;
+	padding-left: 22px;
+	text-align: center;
+	padding-bottom: 22px;
+	padding-right: 22px; */
+}
+
+a {
+	text-decoration: none;
+	/* color: rgba(146,146,146,1.00); */
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+	background-color: #D6DBDF;
+	color: #000;
+}
+
+/*table, th, td {
+    border: 1px solid #D6DBDF;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    border-collapse: collapse;
+}*/
+
+th, td {
+    padding: 15px;
+	text-align: center;
+border: 1px solid #D6DBDF;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+.main {
+	background-color: #fff;
+	width: 94%;
+	height: auto;
+	float: left;
+	padding-left: 4%;
+	padding-right: 2%;
+	color: #000;
+	text-align: justify;
+	margin-bottom: 29px;
+}
+
+#wrapper {
+    width: 750px;
+    border: 0px;
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+
+#contactform {
+	float: left;
+	width: 50%;
+	padding: 2px 2px 2px 2px;
+}
+
+#map {
+	overflow: hidden;
+}
+
+
+input {
+	background-color:#fff;
+	color: #000;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	border: 1px medium #000;
+}
+
+/*header*/
+header {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+}
+
+/* Logo placeholder*/
+/*
+#logo {
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 139px;
+	text-align: center;
+	color: #000; */
+	/* background-color: rgba(190,190,190,1.00); */
+/*	background-color: #fff;
+} */
+
+/* div for Links in header */
+#headerLinks {
+	float: left;
+	/* width: calc( 100% - 139px ); */
+	width: 100%;
+	text-align: right;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	background-color: #fff;
+}
+
+/* Links in header */
+#headerLinks a {
+	text-decoration: none;
+	/* color: rgba(146,146,146,1.00); */
+	color: #000;
+	padding: 0px 50px 0px 50px;
+	font-size: 14px;
+}
+
+#headerLinks a:hover {
+	text-decoration: none;
+	background-color: #D6DBDF;
+	padding: 0px 50px 0px 50px;
+	font-size: 14px;
+}
+
+.banner {
+    background-image: url(../images/veggies.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin-bottom: 30px;
+	
+}
+
+/* Offer text banner*/
+#offer .banner {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	clear: both;
+	/* color: #ADFF2F; */
+	color: #FEFEFE;
+	text-shadow: 2px 2px 5px black;
+	padding-left: 115px;
+	padding-top: 57px;
+	padding-bottom: 57px;  
+}
+	
+/* Main content of the site */
+#content {
+	clear: both;
+	overflow: auto;
+	padding-top: 29px;
+}
+
+/* Sidebar */
+#content .sidebar {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: #000;
+	float: left;
+	width: 20%;
+	padding-left: 3%;
+	padding-right: 3%;
+	text-align: center;
+	background-color: #fff;
+	padding-top: 36px;
+	height: 784px;
+}
+
+/* main content of the site */
+#content .mainContent {
+	float: left;
+	width: 70%;
+	text-align: center;
+	padding-left: 4%;
+}
+
+/*menubar's properties for menus in sidebar */
+#content .sidebar #menubar {
+	text-align: left;
+	color: #000;
+	position: relative;
+	left: 0%;
+}
+
+/* Search field in sidebar */
+#content .sidebar #search {
+	width: 100%;
+	border-radius: 0px;
+	height: 42px;
+	text-align: center;
+	color: #000;
+	font-size: 14px;
+	margin-bottom: 21px;
+}
+
+/* Whole page content */
+#mainWrapper {
+	width: 80%;
+	padding-left: 10%;
+}
+
+fieldset
+{
+	float: right;
+	clear:right;
+	margin-right:10px;
+	padding: auto;
+	height: 290px;
+	
+	
+}
+fieldset.group  { 
+  margin: 0; 
+  padding: 0; 
+  margin-bottom: 1.25em; 
+  padding: .125em; 
+} 
+
+fieldset.group legend { 
+  margin: 0; 
+  padding: 0; 
+  font-weight: bold; 
+  margin-right: 20px; 
+  font-size: 100%; 
+  color: black; 
+} 
+
+
+
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+/*menu elements */
+.menu ul li {
+	list-style-type: none;
+	font-size: x-large;
+	position: relative;
+	left: -35px;
+	padding-top: 12px;
+}
+
+/* Product rows for catalog */
+#content .mainContent .productRow {
+	overflow: auto;
+/*	display: inline-block;*/
+	color: #000;
+}
+
+/* Each product Information in the catalog */
+.mainContent .productRow .productInfo {
+	float: left;
+	padding-left: 5%;
+	padding-right: 5%;
+	width: 22%;
+}
+
+/* Prices of a products in catalog */
+.productRow .productInfo .price {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	/* color: rgba(146,146,146,1.00); */
+	color: #000;
+	font-size: 18px;
+	position: relative;
+	top: -19px;
+}
+
+/* Content holder for products in catalog*/
+.productRow .productInfo .productContent {
+	position: relative;
+	top: -35px;
+	font-size: 14px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-style: normal;
+	font-weight: 200;
+	color: #000;
+	/* color: rgba(146,146,146,1.00); */
+	white-space: pre-wrap;
+}
+
+/* Buy button for products in catalog */
+.productRow .productInfo .buyButton {
+	position: relative;
+	top: -48px;
+	width: 84%;
+	/* background-color: rgba(208,207,207,1.00); */
+	background-color: #fff;
+	height: 35px;
+	color: #000;
+	/* WHITE color: rgba(255,255,255,1.00); */
+	border-style: none;
+	font-size: 10px;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+.buyButton:hover[type="button"] {
+	background-color: #D6DBDF;
+	
+}
+
+/* footer */
+#mainWrapper footer {
+	clear: both;
+	overflow: auto;
+	background-color: #fff;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-style: normal;
+	font-weight: 200;
+	line-height: 1.8;
+	padding-top: 22px;
+	padding-left: 22px;
+	text-align: center;
+	padding-bottom: 22px;
+	padding-right: 22px;
+}
+
+/*Each footer content */
+#mainWrapper footer div {
+	width: 27%;
+	float: left;
+	padding-left: 4%;
+	padding-right: 2%;
+	color: #000;
+	text-align: justify;
+}
+
+/* Links in footer */
+footer div a {
+	color: #000;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+footer div a:hover {
+	color: #000;
+	background-color: #D6DBDF;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+}
+
+/* Product's images in catalog */
+.productInfo div img { 
+	width: 100%;
+	max-height: 400px;
+	max-width: 350px;
+}
+
+/*Links in sidebar */
+.sidebar #menubar .menu ul li a {
+	/* color: rgba(146,146,146,1.00); */
+	color: #000;
+	text-decoration: none;
+}
+
+.sidebar #menubar .menu ul li a:hover {
+	/* color: rgba(107,97,97,1.00);
+	text-decoration: none; */
+	color: #000;
+	background-color: #D6DBDF;
+}
+
+/* Menu headings in sidebar */
+#menubar .menu h2 {
+	font-size: 14px;
+}
+
+/*Links under menus in sidebar */
+#menubar .menu ul li a {
+	font-size: 14px;
+}
+
+/* Menus in sidebar */
+.sidebar #menubar .menu {
+	margin-bottom: 29px;
+}
+
+/* Container for links in footer */
+footer .footerlinks {
+	margin-top: -15px;
+}
+
+/* Media query for tablets */
+@media screen and (max-width:700px) {
+/* search field in sidebar */
+#content .sidebar #search {
+	display: none;
+}
+	
+/* sidebar */
+#content .sidebar {
+	float: none;
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	padding-left: 12%;
+	padding-top: 0px;
+}
+	
+/* horizontal separators in sidebar */
+#content .sidebar hr {
+	display: none;
+}
+	
+/*The sidebar and maincontent of page */
+#content {
+	position: relative;
+	top: -22px;
+	width: 100%;
+	overflow: hidden;
+}
+	
+/*menu headings in sidebar */
+#menubar .menu h2 {
+	display: inline;
+	font-size: medium;
+	padding-right: 6%;
+}
+	
+/* Unordered List of links */
+#menubar .menu ul {
+	display: inline;
+}
+	
+/*list elements */
+#menubar .menu ul li {
+	display: inline;
+	font-size: medium;
+	padding-left: 0%;
+	padding-right: 3%;
+}
+	
+/*The link to be hidden in tablet view */
+.sidebar #menubar .menu ul .notimp {
+	display: none;
+}
+	
+/* menus in sidebar */
+.sidebar #menubar .menu {
+	width: 100%;
+	text-align: center;
+	position: relative;
+	top: 16px;
+}
+	
+/*menubar in sidebar */
+#content .sidebar #menubar {
+	position: relative;
+	left: -7%;
+	overflow: hidden;
+	width: 95%;
+	padding-top: 0px;
+}
+	
+/* offer banners content */
+#mainWrapper #offer p {
+	font-size: small;
+	
+}
+/* main content region of page */
+#mainWrapper #content .mainContent {
+	overflow: hidden;
+	width: 95%;
+	margin-top: 40px;
+}
+	
+/* Prices of products in catalog view */
+.productRow .productInfo .price {
+	font-size: 19px;
+}
+	
+/* Content holders in catalog view */
+.productRow .productInfo .productContent {
+	font-size: 16px;
+}
+	
+/* Buy buttons in catalog view */
+.productRow .productInfo .buyButton {
+	font-size: 15px;
+}
+	
+/* Container for links in footer */
+#mainWrapper footer .footerlinks {
+	float: none;
+	width: 100%;
+	position: relative;
+	top: 17px;
+	clear: both;
+	text-align: center;
+	left: 0%;
+	padding-bottom: 19px;
+}
+	
+/* Container for each footer divisions */
+#mainWrapper footer div {
+	width: 44%;
+	text-align: justify;
+	font-size: 15px;
+}
+	
+/* Links in footer */
+.footerlinks p a {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	display: inline;
+	padding-right: 35px;
+}
+	
+/* Footer region */
+#mainWrapper footer {
+	padding-left: 16px;
+	overflow: hidden;
+}
+	
+/* Links in header */
+header #headerLinks a {
+	padding-left: 0px;
+	padding-right: 30px;
+}
+	
+/* Offer- Text banner */
+#mainWrapper #offer {
+	padding-left: 22%;
+}
+	
+/* Paragraphs in footer */
+footer .footerlinks p {
+	display: none;
+}
+}
+
+/*media query for small screen devices */
+@media screen and (max-width:480px) {
+/*Container for links in header */
+#mainWrapper header #headerLinks {
+	width: 100%;
+	text-align: center;
+	/* background-color: rgba(190,190,190,1.00); */
+	background-color: #fff;
+	padding-bottom: 21px;
+}
+	
+/* Logo placeholder*/
+#mainWrapper header #logo {
+	width: 100%;
+	text-align: center;
+}
+	
+/* Links in header */
+header #headerLinks a {
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 0px;
+}
+	
+/*Offer - Text Banner */
+#mainWrapper #offer {
+	padding-left: 0px;
+	text-align: center;
+}
+	
+/* Menubar in sidebar */
+#content .sidebar #menubar {
+	position: relative;
+	left: -8%;
+	text-align: center;
+}
+	
+/*Menu headings in sidebar */
+#menubar .menu h2 {
+	width: 100%;
+	display: block;
+}
+	
+/* Each product in catalog view */
+.mainContent .productRow .productInfo {
+	width: 100%;
+	display: block;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: relative;
+	left: -2%;
+	background-color: #fff;
+}
+	
+#mainWrapper footer div {
+	width: 100%;
+	margin-left: -16px;
+	text-align: justify;
+	padding-bottom: 16px;
+	overflow: auto;
+}
+	
+/* Unordered list for menu elements */
+.menu ul {
+	position: relative;
+	padding-left: 24%;
+}
+	
+/* Container for links in footer */
+#mainWrapper footer .footerlinks {
+	padding-left: 8%;
+}
+	
+/* Main content which excludes the sidebar */
+#mainwrapper #content .mainContent {
+	margin-top: -81px;
+	text-align: center;
+	width: 100%;
+	padding-left: 0px;
+}
+
+

@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Beef Pie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="../resources/styles/style.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script><br>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="../resources/js/productTabs.js" type="text/javascript"></script>
+<script src="../resources/js/simplecartjs/simpleCart.js"></script>
+<script src="../resources/js/simplecartjs-config.js"></script>
+</head>
+
+<body>
+<div id="mainWrapper">
+  <header> 
+    <!-- This is the header content. It contains Logo and links -->
+    <div id="logo"> <!-- <img src="logoImage.png" alt="sample logo"> --> 
+      <!-- Company Logo text --> 
+       </div>
+    <div id="headerLinks">
+		<a href="../login-test.php" title="Login">Login/Logout</a><a href="../cart.html" class="button">View Cart (<span class="simpleCart_quantity"
+></span> items)</a></div>
+  </header>
+  <section id="offer"> 
+    <!-- The offer section displays a banner text for promotions -->
+	<div class="banner">
+    <h2>Recipes To Go</h2>
+    <p>Ingredient and recipe meal kit service</p><br>
+  </div>
+  </section>
+  <div id="content">
+    <section class="sidebar"> 
+      <!-- This adds a sidebar with 1 searchbox,2 menusets, each with 4 links -->
+      
+      <div id="menubar">
+        <nav class="menu">
+          <h2><!-- Title for menuset 1 -->NAVIGATION</h2>
+          <hr>
+          <ul>
+            <!-- List of links under menuset 1 -->
+			<li><a href="../index.html">Home</a></li>
+            <li><a href="../aboutus.html" title="about">About Us</a></li>
+            <li><a href="../products.html" title="products">Products</a></li>
+			<li><a href="../contact.php" title="contact">Contact Us</a></li>
+			  <li><a href="../faqs.html" title="faqs">FAQs</a></li>
+          </ul>
+        </nav>
+		  <br>
+        <nav class="menu"> <!-- Title for menuset 2 -->
+         <h2><!-- Title for menuset 1 -->SOCIAL MEDIA</h2>
+			<hr><br>
+			<center>
+				<img src="../resources/images/iconfb.png">&nbsp;
+				<img src="../resources/images/icontwitter.png">&nbsp;
+			    <img src="../resources/images/iconig.png">&nbsp;
+				<img src="../resources/images/iconyt.png">
+			</center>
+         </nav>
+		  <br>
+		  <nav class="menu">
+          <h2><!-- Title for menuset 1 -->PAYMENT OPTIONS</h2>
+          <hr>
+          <br>
+			  <center>
+				  <img src="../resources/images/iconvcd.png">&nbsp;
+				  <img src="../resources/images/iconmcd.png">&nbsp;
+				  <img src="../resources/images/iconamex.png">&nbsp;
+				  <img src="../resources/images/iconpp.png">
+			  </center>
+        </nav>
+		  
+      </div>
+    </section>
+    <section class="mainContent">
+		<div class="main">
+			<div class="product">
+				<div class="simpleCart_shelfItem">
+			 <h1 class="item_name">Beef Pie</h1>
+<img class="productIMG item_image product_image" src="https://i.imgur.com/3hLXaGc.png" /> 
+			
+<div style="display: inline-block;">
+<form style="" action="result.php" method="post" id="ingredientForm">
+    <fieldset style="padding:auto;">
+    <legend>Select Your Choices Below</legend>
+    
+    <div class="item_sizecart">Size:
+		<label><input type="radio" name="size" value="5" />Small</label>
+		<label><input type="radio" name="size" value="8" checked="checked" />Medium</label>
+		<label><input type="radio" name="size" value="12" />Large</label> 
+        <input type="hidden" name="sz_tot" value="0.00" />
+    </div>
+    
+    <p id="food_toppings">Ingredients:
+        <label><input type="checkbox"  value=".50" />Onion</label>
+        <label><input type="checkbox"  value=".50" />Beef Mince</label>
+        <label><input type="checkbox"  value=".50" />Tomate Sauce</label>
+        <label><input type="checkbox"  value=".50" />Pepper</label>
+        <br>
+        <label><input type="checkbox"  value=".50" />Pastry</label>
+		<label><input type="checkbox"  value=".50" />Worcestershire sauce</label>
+		
+        <input type="hidden" name="tops_tot" value="0.00" />
+    </p>
+    
+    <p><label>Total: $ <input type="text" name="total" class="num item_price" value="0.00" readonly="readonly" size="4" /></label></p>
+    <br>
+<!--    <p><input type="submit" name="submit" value="Submit" /></p>-->
+		<a class="item_add" onClick="showMsg()" href="javascript:;">Add to Cart</a>
+    
+    </fieldset>
+</form>
+	
+			</div>
+			
+
+
+<script type="text/javascript">
+	
+function showMsg(){
+	confirm('Please ensure the ingredients you select are needed as we strive to reduce food wastage!');
+}	
+
+function formatDecimal(val, n) {
+    n = n || 2;
+    var str = "" + Math.round ( parseFloat(val) * Math.pow(10, n) );
+    while (str.length <= n) {
+        str = "0" + str;
+    }
+    var pt = str.length - n;
+    return str.slice(0,pt) + "." + str.slice(pt);
+}
+
+function getRadioVal(form, name) {
+    var radios = form.elements[name];
+    var val;
+    
+    for (var i=0, len=radios.length; i<len; i++) {
+        if ( radios[i].checked == true ) {
+            val = radios[i].value;
+            break;
+        }
+    }
+    return val;
+}
+
+function getToppingsTotal(e) {
+    var form = this.form;
+    var val = parseFloat( form.elements['tops_tot'].value );
+    
+    if ( this.checked == true ) {
+        val += parseFloat(this.value);
+    } else {
+        val -= parseFloat(this.value);
+    }
+    
+    form.elements['tops_tot'].value = formatDecimal(val);
+    updateFoodTotal(form);
+}
+
+function getSizePrice(e) {
+    this.form.elements['sz_tot'].value = parseFloat( this.value );
+    updateFoodTotal(this.form);
+}
+
+function updateFoodTotal(form) {
+    var sz_tot = parseFloat( form.elements['sz_tot'].value );
+    var tops_tot = parseFloat( form.elements['tops_tot'].value );
+    form.elements['total'].value = formatDecimal( sz_tot + tops_tot );
+}
+
+// removes from global namespace
+(function() {
+    
+    var form = document.getElementById('ingredientForm');
+
+    var el = document.getElementById('food_toppings');
+
+    // input in toppings container element
+    var tops = el.getElementsByTagName('input');
+
+    for (var i=0, len=tops.length; i<len; i++) {
+        if ( tops[i].type === 'checkbox' ) {
+            tops[i].onclick = getToppingsTotal;
+        }
+    }
+
+    var sz = form.elements['size'];
+    
+    for (var i=0, len=sz.length; i<len; i++) {
+        sz[i].onclick = getSizePrice;
+    }
+    
+    // set sz_tot to value of selected
+    form.elements['sz_tot'].value = formatDecimal( parseFloat( getRadioVal(form, 'size') ) );
+    updateFoodTotal(form);
+
+})(); // end remove from global namespace and invoke
+
+</script>
+
+			<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openFood(event, 'Ingredients')" >Ingredients</button>
+  <button class="tablinks" onclick="openFood(event, 'Nutrionals')">Nutrionals</button>
+</div>
+
+<!-- Tab content -->
+<div id="Ingredients" class="tabcontent">
+  <h3>Ingredients</h3>
+  <p>Ingredients: 1 onion finely chopped. 500 g beef mince. 2 beef stock cubes. 1/4 cup tomato sauce. 2 tsp Worcestershire sauce. 1 pinch salt and pepper *to taste. 1 sheet shortcrust pastry. 1 sheet puff pastry.1 sheet puff pastry. 1 egg to glaze</p>
+</div>
+
+<div id="Nutrionals" class="tabcontent">
+  <h3>Nutritional Information</h3>
+  <img src="images/chickenandpumpkinING.png">
+</div>
+			
+			 </div>
+      <div class="productRow"><!-- Each product row contains info of 3 elements -->      </div>
+<div class="productRow"> </div> 
+    </section>
+
+  </div>
+  <footer> 
+    <!-- This is the footer with default 3 divs -->
+    <div>
+      <p>We support our hardworking customers who want to eliminate the time and effort taken to decide on and prepare a meal on the daily.</p>
+    </div>
+    <div>
+		<p><center>&copy; Recipes To Go 2018<br>Template by Adobe Dreamweaver</center></p>
+    </div>
+    <div class="footerlinks">
+     <p><a href="../sitemap.html" title="Link">Sitemap</a></p>
+	 <p><a href="../shipping.html" title="Link">Shipping</a></p>
+	 <p><a href="../privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
